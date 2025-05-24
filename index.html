@@ -359,6 +359,13 @@
             margin-top: 20px;
         }
 
+        /* New: Narrower Modal Dialogs */
+        .modal-dialog-narrow {
+            max-width: 320px; /* Adjust this value to make it more or less narrow */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         /* Responsive Design */
         @media (max-width: 600px) {
             body {
@@ -420,6 +427,11 @@
                 width: 180px;
                 height: 180px;
             }
+
+            /* Adjust narrow modal for smaller screens if needed */
+            .modal-dialog-narrow {
+                max-width: 90%; /* Allow it to take more width on very small screens */
+            }
         }
     </style>
 </head>
@@ -465,8 +477,7 @@
     </div>
 
     <div class="modal fade" id="musicModal" tabindex="-1" aria-labelledby="musicModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-narrow"> <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="musicModalLabel">Music</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -479,8 +490,8 @@
     </div>
 
     <div class="modal fade" id="gcashModal" tabindex="-1" aria-labelledby="gcashModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content gcash-modal-content"> <div class="modal-header">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-narrow"> <div class="modal-content gcash-modal-content">
+                <div class="modal-header">
                     <h5 class="modal-title" id="gcashModalLabel" style="color: black;">Gcash QR Code</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="filter: none;"></button>
                 </div>
